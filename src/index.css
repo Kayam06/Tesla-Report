@@ -1,0 +1,82 @@
+@import "@fontsource/bebas-neue";
+@import "@fontsource/dm-mono";
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0d0f14;
+  --color-bg-surface: #151820;
+  --color-bg-elevated: #1e222d;
+  --color-bg-overlay: rgba(13, 15, 20, 0.8);
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0aabf;
+  --color-text-muted: #6b7280;
+  --color-text-disabled: #4b5563;
+
+  --color-accent-primary: #47bfff;
+  --color-accent-secondary: #0088cc;
+  --color-accent-tertiary: #005580;
+
+  --color-semantic-positive: #10b981;
+  --color-semantic-negative: #ef4444;
+  --color-semantic-warning: #f59e0b;
+  --color-semantic-neutral: #3b82f6;
+
+  --color-border-default: rgba(255, 255, 255, 0.12);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-strong: rgba(255, 255, 255, 0.24);
+
+  --shadow-glow: 0 0 20px rgba(71, 191, 255, 0.15);
+
+  --font-sans: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --bg-base: #0d0f14;
+    --bg-surface: #151820;
+    --bg-elevated: #1e222d;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aabf;
+    --accent-primary: #47bfff;
+    --semantic-positive: #10b981;
+    --semantic-negative: #ef4444;
+    --semantic-warning: #f59e0b;
+    --semantic-neutral: #3b82f6;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-elevated);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
